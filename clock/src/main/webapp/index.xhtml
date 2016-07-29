@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+       <title>Clock Angle</title>
+    </head>
+    <body>
+        <div style="position: absolute; left: 30%; text-align: center;">
+        <h1> Clock Angle </h1>
+        <h:form>
+            <h4> Inform the hour (between 0 and 12) and the minute (between 0 and 59)</h4>
+            <h:inputText style="width: 60px; text-align: center;" value="#{ClockController.hours}" alt="Between 0 and 12." label="Hours (between 0 and 12)"></h:inputText> 
+            <h:inputText style="width: 60px; text-align: center;" value="#{ClockController.minutes}" alt="Between 0 and 59" label="Minutes (between 0 and 59" ></h:inputText>
+            <br></br><br></br>
+           <h:commandButton value="Find the Angle!" action="#{ClockController.defineAngle()}"></h:commandButton>
+           
+           
+    	</h:form>
+        
+        <h2> Angle is #{ClockController.angle} ! </h2>
+        </div>
+    </body>
+</html>
